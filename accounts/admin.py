@@ -42,7 +42,7 @@ class CustomUserAdmin(UserAdmin):
             },
         ),
         ("Permissions", {"fields": ("is_active", "is_staff", "is_superuser")}),
-        ("Important dates", {"fields": ()}),
+        # ("Important dates", {"fields": ("date_joined",)}),
     )
     add_fieldsets = (
         (
