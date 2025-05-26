@@ -17,6 +17,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # myapps
     "accounts",
+    "destinations",
+    "hotels",
 ]
 
 MIDDLEWARE = [
