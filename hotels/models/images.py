@@ -1,9 +1,8 @@
 import uuid
 import PIL
 from django.db import models
-from hotels.models.base import Hotel
-from hotels.models.room import Room
-
+from hotels.models.hotel_base import Hotel
+from hotels.models.room_base import Room
 
 
 def hotel_image_upload_path(instance, filename):
@@ -30,8 +29,9 @@ class ImageModel(models.Model):
     hotel = models.ForeignKey(
         to=Hotel,
         on_delete=models.CASCADE,
-        related_name="hotel_images"
+        related_name="hotel_images",
     )
+
     class Meta:
         db_table = "images"
         verbose_name = "Image"
@@ -91,7 +91,7 @@ class RoomImageModel(models.Model):
     room = models.ForeignKey(
         to=Room,
         on_delete=models.CASCADE,
-        related_name="room_images"
+        related_name="room_images",
     )
 
     class Meta:

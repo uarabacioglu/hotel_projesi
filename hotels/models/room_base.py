@@ -1,9 +1,8 @@
 import uuid
 from django.db import models
-
-from hotels.models.base import Hotel
-from hotels.models.penalty import Penalty
-from hotels.models.pension_type import Pension
+from hotels.models.hotel_base import Hotel
+from hotels.models.room_penalty import Penalty
+from hotels.models.room_pension import Pension
 from hotels.models.policy import Policy
 from hotels.models.room_facility import RoomFacilities
 
@@ -55,4 +54,4 @@ class Room(models.Model):
     )
 
     def __str__(self):
-        return str(self.title)
+        return f"{self.hotel.title} - {self.title}"

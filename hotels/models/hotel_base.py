@@ -3,8 +3,8 @@ from django.db import models
 from autoslug import AutoSlugField
 
 from destinations.models import DestinationModel
-from hotels.models.category import Category
-from hotels.models.location import LocationDetails
+from hotels.models.hotel_category import Category
+from hotels.models.hotel_location import LocationDetails
 from hotels.models.policy import Policy
 from hotels.models.hotel_facility import GeneralFacility
 
